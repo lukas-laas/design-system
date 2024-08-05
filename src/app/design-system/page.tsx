@@ -11,12 +11,13 @@ import {
   SelectCustom,
   TextInput,
 } from "../_components";
+import { DrawerCustom } from "../_components/drawer";
 import { H2 } from "../_components/headings";
 import { Content, Section } from "../_components/layout";
 
 export default function DesignSystem() {
   return (
-    <>
+    <main className="p-8">
       <Section>
         <H2>Buttons:</H2>
         <Content>
@@ -75,12 +76,18 @@ export default function DesignSystem() {
           />
         </Content>
       </Section>
+      <Section>
+        <Content>
+          <H2>Drawer</H2>
+          <DrawerCustom />
+        </Content>
+      </Section>
       {/* <div>
         <div>Layout stuff, card etc</div>
       </div>
       <div>
         <div>etc</div>
       </div> */}
-    </>
+    </main>
   );
 }

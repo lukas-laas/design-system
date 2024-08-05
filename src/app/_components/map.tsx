@@ -24,11 +24,5 @@ export default function MapCustom() {
     return () => map.setTarget(undefined);
   }, []);
 
-  return (
-    <div
-      style={{ height: "100%", width: "100%" }}
-      id="map"
-      className="map-container"
-    />
-  );
+  return <div id="map" className="map-container w-full h-full" />;
 }
