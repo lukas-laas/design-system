@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export function ButtonCTA({ text }: { text: string }) {
   return (
     <Button
-      className="uppercase bg-emerald-600 font-bold text-white hover:bg-emerald-500 text-lg"
+      className="capitalize bg-emerald-600 font-bold text-white hover:bg-emerald-500 text-lg"
       size={"lg"}
     >
       {text}
@@ -21,7 +21,7 @@ export function ButtonPrimary({ text }: { text: string }) {
 
 export function ButtonSecondary({ text }: { text: string }) {
   return (
-    <Button className="capitalize font-semibold text-emerald-600 border bg-white border-emerald-600 border-2 hover:text-emerald-500 hover:bg-white hover:border-emerald-500">
+    <Button className="capitalize font-semibold text-emerald-600 bg-white border-emerald-600 border-2 hover:text-emerald-500 hover:bg-white hover:border-emerald-500">
       {text}
     </Button>
   );
