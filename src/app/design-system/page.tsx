@@ -5,26 +5,33 @@ import {
   ButtonSecondary,
   ButtonSmall,
 } from "../_components";
-import { CheckboxCustom, RadioCustom, TextInput } from "../_components/inputs";
+import {
+  CheckboxCustom,
+  RadioCustom,
+  SelectCustom,
+  TextInput,
+} from "../_components";
+import { H2 } from "../_components/headings";
+import { Content, Section } from "../_components/layout";
 
 export default function DesignSystem() {
   return (
     <>
-      <div className="flex gap-1 flex-wrap p-1">
-        <h2>Buttons:</h2>
-        <div className="flex gap-1 flex-wrap p-1">
+      <Section>
+        <H2>Buttons:</H2>
+        <Content>
           <ButtonCTA text="Button" />
           <ButtonPrimary text="Button" />
           <ButtonSecondary text="Button" />
           <ButtonDelete />
           <ButtonSmall text="button" />
-        </div>
-      </div>
-      <div className="flex gap-1 flex-wrap p-1">
-        <h2>
+        </Content>
+      </Section>
+      <Section>
+        <H2>
           Font: <strong>Roboto</strong>
-        </h2>
-        <div className="flex gap-1 flex-wrap p-1">
+        </H2>
+        <Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
             blanditiis voluptatem esse, ullam ipsa quis cumque aliquam tempore
@@ -36,11 +43,11 @@ export default function DesignSystem() {
             blanditiis voluptatem esse, ullam ipsa quis cumque aliquam tempore
             recusandae.
           </p>
-        </div>
-      </div>
-      <div className="flex gap-1 flex-wrap p-1 flex-col">
-        <h2>Inputs:</h2>
-        <div className="p-1 flex flex-col">
+        </Content>
+      </Section>
+      <Section>
+        <H2>Inputs:</H2>
+        <Content>
           <TextInput
             placeholder="input"
             label={"text input"}
@@ -58,9 +65,16 @@ export default function DesignSystem() {
             ]}
             name={"Radio group"}
           />
-          <input type="range" />
-        </div>
-      </div>
+          <SelectCustom
+            options={[
+              { value: "1", label: "item 1" },
+              { value: "2", label: "item 2" },
+            ]}
+            name={"Select"}
+            placeholder={"Select"}
+          />
+        </Content>
+      </Section>
       {/* <div>
         <div>Layout stuff, card etc</div>
       </div>
