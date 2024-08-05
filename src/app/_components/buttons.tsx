@@ -21,7 +21,7 @@ export function ButtonPrimary({ text }: { text: string }) {
 
 export function ButtonSecondary({ text }: { text: string }) {
   return (
-    <Button className="capitalize bg-gray-600 font-semibold text-white hover:bg-gray-500">
+    <Button className="capitalize font-semibold text-emerald-600 border bg-white border-emerald-600 border-2 hover:text-emerald-500 hover:bg-white hover:border-emerald-500">
       {text}
     </Button>
   );
